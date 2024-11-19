@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="ThemeMarch">
+	<!-- Page Title -->
+	<title>Veril - Construction and Industrial HTML Template</title>
+  <!-- Favicon Icon -->
+	<link rel="icon" href="assets/img/favicon.png">
+	<!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/icofont.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/owl.min.css">
+  <link rel="stylesheet" href="assets/css/modal.video.min.css">
+  <link rel="stylesheet" href="assets/css/slick.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+  <link id="theme" rel="stylesheet" href="assets/css/color/color1.css">
+</head>
+
+<body>
+  <!-- Start Preloader -->
+  <div id="tm-preloader">
+    <div id="tm-status">
+      <div class="tm-spinner">
+        <div class="tm-rect1"></div>
+        <div class="tm-rect2"></div>
+        <div class="tm-rect3"></div>
+        <div class="tm-rect4"></div>
+        <div class="tm-rect5"></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+  
+  <div class="tm-commingsoon-wrap tm-bg text-center" data-src="https://thememarch.com/demo/html/veril/assets/img/commingsoon-bg.jpg">
+    <div class="container">
+      <a href="index.html" class="tm-logo-link">
+        <img src="" alt="" class="tm-logo">
+      </a>
+      <h1 class="tm-comming-heading">Our Website is Coming Soon!</h1>
+      <div class="tm-commingsoon">
+        <div id="tm-if-expired" class="tm-countdown tm-if-expired">
+          <div class="countdown-element">
+            <div id="tm-count-days" class="tm-day-count"></div>
+            <span class="tm-count-title">Days</span>
+          </div>
+          <span class="tm-sep tm-f60 tm-light-blue-c">:</span>
+          <div class="countdown-element">
+            <div id="tm-count-hours" class="tm-day-count"></div>
+            <span class="tm-count-title">Hours</span>
+          </div>
+          <span class="tm-sep tm-f60 tm-light-blue-c">:</span>
+          <div class="countdown-element">
+            <div id="tm-count-minutes" class="tm-day-count"></div>
+            <span class="tm-count-title">Minutes</span>
+          </div>
+          <span class="tm-sep tm-f60 tm-light-blue-c">:</span>
+          <div class="countdown-element">
+            <div id="tm-count-seconds" class="tm-day-count"></div>
+            <span class="tm-count-title">Seconds</span>
+          </div>
+        </div><!-- .tm-countdown -->
+      </div>
+      <div class="tm-comming-text">We are working on a new site, don’t forget to check when lunch! <br>
+      Sign up and stay updated!</div>
+      <div class="tm-subscribe">
+        <form class="mailchimp subscribe-form" action="#">
+          <input type="email" name="subscribe" id="subscriber-email" placeholder="Subscribe here">
+          <button type="submit" id="subscribe-button" class="tm-subscribe-btn"><i class="fa fa-paper-plane-o"></i></button>
+          <h5 class="subscription-success"> .</h5>
+          <h5 class="subscription-error"> .</h5>
+          <label class="subscription-label" for="subscriber-email"></label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/smoothScroll.min.js"></script>
+  <script src="assets/js/jQuery.easing.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/mailchimp.min.js"></script>
+  <script src="assets/js/owl.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Set the date we're counting down to tm-if-expired
+    var countDownDate = new Date("July 22, 2024 20:30:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+      
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Output the result in an element with id="demo"
+      document.getElementById("tm-count-days").innerHTML = days;
+      document.getElementById("tm-count-hours").innerHTML = hours;
+      document.getElementById("tm-count-minutes").innerHTML = minutes;
+      document.getElementById("tm-count-seconds").innerHTML = seconds;
+      
+      // If the count down is over, write some text 
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("tm-if-expired").innerHTML = "DATE EXPIRED";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
